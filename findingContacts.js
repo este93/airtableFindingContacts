@@ -8291,3 +8291,6 @@ Airtable.Error = AirtableError;
 module.exports = Airtable;
 
 },{"./airtable_error":1,"./base":2,"./record":13,"./table":15}]},{},["airtable"]);
+
+var Airtable = require('airtable');
+var base = new Airtable({ apiKey: 'keyKEDd4VpZwHDga6' }).base('apphQRB2KoFoHPxOG');
