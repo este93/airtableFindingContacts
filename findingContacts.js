@@ -9,3 +9,15 @@ require=function(){return function e(t,r,n){function o(i,s){if(!r[i]){if(!t[i]){
 
 var Airtable = require('airtable');
 var base = new Airtable({ apiKey: 'keyKEDd4VpZwHDga6' }).base('apphQRB2KoFoHPxOG');
+
+base('Test').select({
+    filterByFormula: "{Email} = 'testmail@gmail.com'"
+}).eachPage(function page(records, fetchNextPage) {
+    records.forEach(function(record) {
+        console.log(record)
+    });
+
+    fetchNextPage();
+}, function done(error) {
+    console.log(error);
+});
