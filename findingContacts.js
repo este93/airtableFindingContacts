@@ -1,4 +1,4 @@
-import airtable from './airtable.browser.js';
+import { airtable } from './course.js';
 var Airtable = require('airtable');
 var base = new Airtable({ apiKey: 'keyKEDd4VpZwHDga6' }).base('apphQRB2KoFoHPxOG');
 var contactId = '';
